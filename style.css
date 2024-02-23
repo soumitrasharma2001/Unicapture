@@ -22,12 +22,26 @@ body {
     position: absolute;
 }
 
+#cursor {
+    height: 7vw;
+    width: 7vw;
+    background-color: rgb(195, 11, 11);
+    border-radius: 50%;
+    position: fixed;
+    z-index: 9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
 #page1-content {
     height: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.05);
     position: relative;
-    z-index: 2;
+    z-index: 10;
     color: #dadada;
 }
 
@@ -37,5 +51,5 @@ nav {
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 25px;
 }
