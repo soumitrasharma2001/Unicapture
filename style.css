@@ -6,7 +6,71 @@ body {
     padding: 0;
 }
 
+.container {
+    position: relative;
+    width: 200px;
+    /* Adjust width as needed */
+    height: 200px;
+    /* Adjust height as needed */
+}
 
+.top-image,
+.bottom-image {
+    opacity: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-duration: 5s;
+    /* Adjust animation duration as needed */
+    animation-fill-mode: forwards;
+}
+
+.top-image {
+    animation-name: topSlide;
+    animation-delay: 1s;
+    /* Adjust delay as needed */
+}
+
+.bottom-image {
+    animation-name: bottomSlide;
+    animation-delay: 1s;
+    /* Adjust delay as needed */
+}
+
+@keyframes topSlide {
+    0% {
+        top: 0;
+    }
+
+    /* Adjust initial position */
+    100% {
+        opacity: 1;
+        top: 32%;
+    }
+}
+
+@keyframes bottomSlide {
+    0% {
+        bottom: 0;
+    }
+
+    /* Adjust initial position */
+    100% {
+        opacity: 1;
+        bottom: 32%;
+    }
+}
+
+#intro {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    background-color: black;
+}
+
+#main {
+    display: none;
+}
 
 #page1 {
     height: 100vh;
@@ -25,7 +89,7 @@ body {
 #cursor {
     height: 7vw;
     width: 7vw;
-    background-color: rgb(195, 11, 11);
+    background-color: grey;
     border-radius: 50%;
     position: fixed;
     z-index: 9;
