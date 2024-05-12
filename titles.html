@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select the title</title>
+<style>
+  /* Styling for the box */
+  body{
+    margin:0;
+    padding:0;
+    background-image:url('images/840843081452.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+   .container{
+    display: flex;
+    justify-content: center;
+
+   }
+  .box {
+    bottom: 50%;
+    border: 2px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    width:300px; 
+    height: auto;
+    margin: 20px;
+    top:50%;
+    left:50%;
+    color:white;
+  }
+
+  /* Styling for the buttons */
+  .button {
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    background-color: blue;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+ 
+</style>
+</head>
+<body>
+<div class="container">
+
+    
+    <div class="box">
+        <h1>Select the title</h1>
+      <button class="button" onclick="toggleColor(this)" status="blue">Sports</button>
+      <button class="button" onclick="toggleColor(this)" status="blue">Cricket</button>
+      <button class="button" onclick="toggleColor(this)" status="blue">Football</button>
+      <button class="button" onclick="toggleColor(this)" status="blue">Basketball</button>
+      <button class="button" onclick="toggleColor(this)" status="blue">Conference</button>
+      <button class="button" onclick="toggleColor(this)" status="blue">Educational</button>
+      <button class="button" onclick="toggleColor(this)" status="blue">Nature</button>
+      <button class="button" onclick="toggleColor(this)" status="blue">Wildlife</button>
+      <button class="button" onclick="toggleColor(this)" status="blue">Technology</button>
+      <button class="button" onclick="toggleColor(this)" status="blue">IIT</button>
+      <button class="button" style="background-color: green;" id="myButton">Submit</button>
+    </div>
+</div>
+
+<script>  
+    function toggleColor(button) {
+      if (button.status==='blue') {
+      button.style.backgroundColor = 'red';
+      button.status='red' // Change to initial color
+    } else {
+      button.style.backgroundColor = 'blue';
+      button.status='blue' // Change to red color
+    }
+    }
+        document.getElementById("myButton").addEventListener("click", function() {
+            window.location.href = "success.html"; // Change "newpage.html" to the URL of your new page
+        });
+    </script>
+</body>
+</html>
